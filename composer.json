@@ -1,0 +1,25 @@
+{
+    "name": "janakawicks/yii2-resque-enqueue",
+    "description": "Extension capable of enqueuing jobs to Resque backend.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","resque","redis"],
+    "version" : "1.0.0",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Janaka Wickramasinghe",
+            "email": "janakawicks@gmail.com"
+        }
+    ],
+    "support" : {
+        "source" : "https://github.com/janakawicks/yii2-resque-enqueue"
+    },
+    "require": {
+        "yiisoft/yii2-redis": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "janakawicks\\resque\\": ""
+        }
+    }
+}
