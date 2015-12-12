@@ -73,7 +73,7 @@ return [
         ],
         'resqueEnqueue' => [
           'class' => 'janakawicks\resque\ResqueEnqueue',
-          'namespace' => 'my_engine',
+          'namespace' => 'my_engine:',
         ],
     ]
 ];
@@ -81,7 +81,7 @@ return [
 
 ```php
 $resqueEnqueue = Yii::$app->resqueEnqueue;
-$resqueEnqueue->namespace = 'my_engine';
+$resqueEnqueue->namespace = 'my_engine:';
 ```
 
 Key is generated as follows

@@ -20,7 +20,7 @@ class ResqueEnqueue extends Component
     $args = func_get_args();
 
     $enqueue['class'] = $args[0];
-    foreach($args as $v){
+    foreach($args as $k => $v){
       if ($k < 1)
         continue;
       $enqueue['args'][] = $v;
@@ -29,9 +29,11 @@ class ResqueEnqueue extends Component
       $enqueue['args'] = [];
 
     return Yii::$app->redis->executeCommand(
-      'lpush', 
-      $this->namespace . ':queue:' . $this->queue,
-      json_encode($enqueue));
+      'lpush', [
+        $this->namespace . 'queue:' . $this->queue,
+        json_encode($enqueue)
+        ]
+      );
   }
 
 }
